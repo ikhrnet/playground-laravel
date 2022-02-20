@@ -7,12 +7,8 @@ use Illuminate\Http\Request;
 class HelloController extends Controller
 {
     public function index() {
-        return <<<EOF
-        <html>
-            <body>
-                <p>Hello!</p>
-            </body>
-        </html>
-EOF;
+        $greeting = 'Hola!';
+
+        return view('hello', compact('greeting'));
     }
 }
